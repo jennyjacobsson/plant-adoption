@@ -4,7 +4,7 @@ import styled from 'styled-components/macro'
 import { isLoggedIn } from '../App'
 
 const Outer = styled.div`
-display:flex;
+  display:flex;
   /* position: absolute;
   top: 0;
   left: 0; */
