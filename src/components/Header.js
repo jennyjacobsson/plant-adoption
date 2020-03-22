@@ -5,19 +5,14 @@ import { isLoggedIn } from '../App'
 
 const Outer = styled.div`
   display:flex;
-  /* position: absolute;
-  top: 0;
-  left: 0; */
   width: 100%;
   box-sizing: border-box;
   text-align:left;
   padding: 16px 0;
-  /* font-family: 'Cherry Swash', cursive; */
-  /* font-family: 'Forum', cursive; */
   
-    a {
-        text-decoration: none;
-      }
+  a {
+    text-decoration: none;
+  }
 `
 
 const Wrap = styled.div`
@@ -31,16 +26,15 @@ const Text = styled.h2`
   font-size:14px;
   line-height: 1;
   color:#222;
-  /* font-weight:normal; */
 
   @media (min-width: 768px) {
     margin-left:40px;
-   font-size:20px;
+    font-size:20px;
   }
 `
 
 const Logo = styled.h1`
-  font-size:18px;
+  font-size:26px;
   font-weight:normal;
   color:#222;
   font-family: 'Cherry Swash', cursive;
@@ -48,12 +42,16 @@ const Logo = styled.h1`
   @media (min-width: 768px) {
     margin:0;
    font-size:30px;
-  }
+  } 
 `
 
 const NavContainer = styled(Wrap)`
-  display:flex;
-  justify-content:space-evely;
+  display:none;
+
+  @media (min-width: 768px) {
+    display:flex;
+    justify-content:space-evenly;
+  }
 `
 
 export const Header = () => {
@@ -70,11 +68,11 @@ export const Header = () => {
   return (
     <Outer>
       <Wrap>
-        {location.pathname !== '/' && <Logo />}
-        {location.pathname !== '/' && <NavContainer />}
-        <Link to="/">
-          <Logo isStartPage={location.pathname === '/'}>Plant adoption</Logo>
-        </Link>
+        {location.pathname !== '/' && (
+          <Link to="/">
+            <Logo>Plant adoption</Logo>
+          </Link>
+        )}
       </Wrap>
       <NavContainer>
         {!isLoggedIn() && <Link to="/login"><Text>Log in</Text></Link>}

@@ -52,8 +52,6 @@ export const Form = styled.form`
   align-items:center;
   max-width: 400px;
   margin: 0 auto 40px;
-  /* background-color:#EDF6E5; */
-  /* border:#F3F3F3 solid 6px; */
   padding:20px;
   border-radius:8px;
 `
@@ -81,7 +79,6 @@ export const Input = styled.input`
   border: 0;
   border-radius: 6px;
   border:#F3F3F3 solid 4px;
-  /* background-color:#EDF6E5; */
 `
 
 export const Title = styled.h1`
@@ -93,10 +90,3 @@ export const Title = styled.h1`
   font-size:24px;   
  }
 `
-
-// export const SwitchLinks = styled.div`
-//   text-align: center;
-//   margin-bottom: 40px;
-//   color: #35749f;
-//   font: inherit;
-// `

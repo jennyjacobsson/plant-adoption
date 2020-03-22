@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 import HamburgerMenu from 'react-hamburger-menu'
 import styled from 'styled-components/macro'
-import { Link, useLocation } from 'react-router-dom'
-import { Header } from './Header'
+import { Link } from 'react-router-dom'
+// import { Header } from './Header'
+import { isLoggedIn } from '../App'
 
-const HeaderPlaceholder = styled.div`
-  height: 50px;
-`
+// const HeaderPlaceholder = styled.div`
+//   height: 50px;
+// `
 
 const LinkElement = styled(Link)`
   display: block;
@@ -25,7 +26,7 @@ const MenuWrap = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: ${(props) => (props.open ? 'rgb(203, 250, 255)' : 'transparent')};
+  background-color: ${(props) => (props.open ? '#94d299' : 'transparent')};
   font-size: 24px;
   font-weight: 600;
 `
@@ -37,10 +38,13 @@ const BurgerWrap = styled.div`
   transform: translateX(-50%);
   width: 100%;
   max-width: 600px;
+
   @media (min-width: 768px) {
-    max-width: ${(props) => (props.isStartPage ? 1000 : 600)}px;}
-    padding: 0 10px;
-    box-sizing: border-box;
+    display:none;
+    /* max-width: ${(props) => (props.isStartPage ? 1000 : 600)}px;} */
+    /* padding: 0 10px;
+    box-sizing: border-box; */
+    }
 `
 
 const Burger = styled.div`
@@ -56,8 +60,7 @@ const NavLinks = styled.div`
   text-decoration:none;
 `
 
-export const Navbar = () => {
-  const location = useLocation()
+export const BurgerMenu = () => {
   const [burgerOpen, setBurgerOpen] = useState(false)
 
   const handleBurgerClick = () => {
@@ -73,10 +76,8 @@ export const Navbar = () => {
 
   return (
     <>
-      {location.pathname !== '/' && <HeaderPlaceholder />}
       <MenuWrap open={burgerOpen}>
-        {location.pathname !== '/' && <Header />}
-        <BurgerWrap isStartPage={location.pathname === '/'}>
+        <BurgerWrap>
           <Burger>
             <HamburgerMenu
               isOpen={burgerOpen}
@@ -85,7 +86,7 @@ export const Navbar = () => {
               height={18}
               strokeWidth={1}
               rotate={0}
-              color={location.pathname === '/' ? 'black' : 'white'}
+              color="black"
               borderRadius={0}
               animationDuration={0.5} />
           </Burger>
@@ -95,18 +96,25 @@ export const Navbar = () => {
             <LinkElement to="/" onClick={() => setBurgerOpen(false)}>
               Plants Ahoy!
             </LinkElement>
-            <LinkElement to="/login" onClick={() => setBurgerOpen(false)}>
+            {!isLoggedIn() && (
+              <LinkElement to="/login" onClick={() => setBurgerOpen(false)}>
               Log In
-            </LinkElement>
+              </LinkElement>)}
+            {!isLoggedIn() && (
+              <LinkElement to="/register" onClick={() => setBurgerOpen(false)}>
+              Register
+              </LinkElement>)}
             <LinkElement to="/newad" onClick={() => setBurgerOpen(false)}>
               Create Ad
             </LinkElement>
-            <LinkElement to="/mypage" onClick={() => setBurgerOpen(false)}>
+            {isLoggedIn() && (
+              <LinkElement to="/mypage" onClick={() => setBurgerOpen(false)}>
               My Page
-            </LinkElement>
-            <LinkElement to="/" onClick={handleSignout}>
+              </LinkElement>)}
+            {isLoggedIn() && (
+              <LinkElement to="/" onClick={handleSignout}>
               Log Out
-            </LinkElement>
+              </LinkElement>)}
           </NavLinks>
         )}
       </MenuWrap>

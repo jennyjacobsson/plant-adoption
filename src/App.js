@@ -7,7 +7,7 @@ import { AnswerForm } from 'components/AnswerForm'
 import { Login } from 'components/Login'
 import { Registration } from 'components/Registration'
 import { MyPage } from 'components/MyPage'
-// import { Navbar } from 'components/Navbar'
+import { BurgerMenu } from 'components/BurgerMenu'
 import { Header } from 'components/Header'
 import { Footer } from './components/Footer'
 
@@ -31,7 +31,7 @@ export const App = () => {
   return (
     <BrowserRouter>
       <main>
-        {/* <Navbar /> */}
+        <BurgerMenu />
         <Header />
         <Switch>
           <Route path="/" exact component={StartPage} />

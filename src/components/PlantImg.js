@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components/macro'
 
 const Outer = styled.div`
-  /* border: 10px solid white; */
   border-bottom: 0;
   flex: 1;
 `

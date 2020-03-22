@@ -18,14 +18,10 @@ const Container = styled.div`
   height: 100%; 
   color:#514e4c;
   background-color:#fff;
-  border:#F3F3F3 solid 6px;
+  border:#F3F3F3 solid 3px;
   border-radius:6px;
-  overflow:hidden;
 `
-const BorderSection = styled.div`
-  /* border:#F3F3F3 solid 6px;
-  border-bottom:none; */
-`
+
 const Title = styled.h3`
   text-align:left;
   padding: 0 10px;
@@ -56,7 +52,7 @@ const Wrap = styled.div`
   width:auto;
   background-color:#F3F3F3;
   align-items:stretch;
-  margin-top: auto;
+  margin-top:auto;
 
   svg {
     margin-right:8px;
@@ -79,10 +75,8 @@ export const LinkAd = ({ id, title, location, price, imageUrl }) => {
   return (
     <NewLink to={`/plants/${id}`}>
       <Container>
-        <BorderSection>
-          <PlantImg imageUrl={imageUrl} />
-          <Title>{title}</Title>
-        </BorderSection>
+        <PlantImg imageUrl={imageUrl} />
+        <Title>{title}</Title>
         <Wrap>
           <Text><Location /> {location}</Text>
           <Text><Price /> {price > 0 ? `${price} kr` : 'Free'}</Text>

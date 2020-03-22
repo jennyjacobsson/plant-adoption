@@ -12,7 +12,6 @@ import { AnswerForm } from './AnswerForm'
 
 const Background = styled.div`
   color:#514e4c;
-  /* background-color:#eeffe5; */
   border:#F3F3F3 solid 6px;
   border-radius:6px;
 `
@@ -36,8 +35,7 @@ const Text = styled.p`
 
   @media (min-width: 600px) {
     font-size:18px;
-  }
-  
+  } 
 `
 
 const Meta = styled.div`

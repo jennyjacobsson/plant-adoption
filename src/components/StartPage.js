@@ -13,10 +13,8 @@ const Header = styled.div`
   width:auto;
   text-align:center;
   justify-content:center;
-  margin-top:10px;
 
   @media (min-width: 768px) {
-    margin:40px;
     height:500px;
 
   }
@@ -29,6 +27,10 @@ const HeaderText = styled.div`
   h1 {
     font-weight: normal;
     font-size:36px;
+
+    @media (min-width: 768px) {
+    font-size: 45px;
+    }
   }
 
   h2 {
@@ -41,7 +43,7 @@ const HeaderText = styled.div`
   a {
     color:white;
     cursor:pointer;
-  }
+  } 
 `
 
 const Outer = styled(Container)`
@@ -88,7 +90,6 @@ const SearchField = styled.input`
   border-radius:6px;
   font-size:18px;
   background-color: #F3F3F3;
-  /* background-color:#e1ffd1; */
 `
 
 const HeaderImage = styled.img`

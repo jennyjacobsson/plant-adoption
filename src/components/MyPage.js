@@ -28,12 +28,6 @@ const LinkWrap = styled.div`
   }
 `
 
-// const Button = styled(Btn)`
-//   background-color:#72BD78;
-//   margin:10px;
-//   font-size:16px;
-// `
-
 export const MyPage = () => {
   const [secret, setSecret] = useState(false)
   const [loading, setLoading] = useState(true)
@@ -78,9 +72,6 @@ export const MyPage = () => {
               🌱
             </span>
           </Title>
-          {/* <Link to="/newad">
-            <Button>Create ad</Button>
-          </Link> */}
           <Text>Here are your current ads: </Text>
           {loading && <Loading />}
           {!loading && !userAds.length && <p>You have no plants!</p>}

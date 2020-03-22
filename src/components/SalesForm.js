@@ -18,10 +18,10 @@ const File = styled.label`
   border-radius: 6px;
   border:#F3F3F3 solid 4px;
 
-input {
-  position: absolute;
-  left: -10000em;
-}
+  input {
+    position: absolute;
+    left: -10000em;
+  }
 `
 
 const FileImage = styled.img`
