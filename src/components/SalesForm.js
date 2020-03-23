@@ -89,7 +89,7 @@ export const SalesForm = () => {
   return (
     <Container>
       <Form onSubmit={handleSubmitAd}>
-        <Title>Send out an SOS!</Title>
+        <Title>Adopt away!</Title>
         <File>
           <input
             type="file"

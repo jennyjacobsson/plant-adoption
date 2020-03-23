@@ -26,6 +26,8 @@ const Text = styled.h2`
   font-size:14px;
   line-height: 1;
   color:#222;
+  /* font-family: 'Cherry Swash', cursive; */
+
 
   @media (min-width: 768px) {
     margin-left:40px;
@@ -34,7 +36,7 @@ const Text = styled.h2`
 `
 
 const Logo = styled.h1`
-  font-size:26px;
+  font-size:28px;
   font-weight:normal;
   color:#222;
   font-family: 'Cherry Swash', cursive;
@@ -78,7 +80,7 @@ export const Header = () => {
         {!isLoggedIn() && <Link to="/login"><Text>Log in</Text></Link>}
         {!isLoggedIn() && <Link to="/register"><Text>Register</Text></Link>}
         <Link to="/newad"><Text>New Ad</Text></Link>
-        {isLoggedIn() && <Link to="/mypage"><Text>My page</Text></Link>}
+        {isLoggedIn() && <Link to="/mypage"><Text>My Page</Text></Link>}
         {isLoggedIn() && <Link to="/" onClick={handleSignout}><Text>Log Out</Text></Link>}
       </NavContainer>
     </Outer>

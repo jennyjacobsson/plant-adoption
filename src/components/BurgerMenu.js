@@ -12,6 +12,7 @@ const LinkElement = styled(Link)`
 `
 
 const MenuWrap = styled.div`
+  font-family: 'Cherry Swash', cursive;
   position:absolute;
   top: 0;
   right: 0;
@@ -23,7 +24,7 @@ const MenuWrap = styled.div`
   justify-content: center;
   background-color: ${(props) => (props.open ? '#94d299' : 'transparent')};
   font-size: 24px;
-  font-weight: 600;
+  /* font-weight: 600; */
 `
 
 const BurgerWrap = styled.div`
@@ -86,7 +87,7 @@ export const BurgerMenu = () => {
         {burgerOpen && (
           <NavLinks>
             <LinkElement to="/" onClick={() => setBurgerOpen(false)}>
-              Plants Ahoy!
+              Plant adoption
             </LinkElement>
             {!isLoggedIn() && (
               <LinkElement to="/login" onClick={() => setBurgerOpen(false)}>

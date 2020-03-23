@@ -9,7 +9,7 @@ import { Registration } from 'components/Registration'
 import { MyPage } from 'components/MyPage'
 import { BurgerMenu } from 'components/BurgerMenu'
 import { Header } from 'components/Header'
-import { Footer } from './components/Footer'
+// import { Footer } from './components/Footer'
 
 export const SERVER_URL = 'https://plants-ahoy.herokuapp.com';
 
@@ -42,7 +42,7 @@ export const App = () => {
           <Route path="/register" component={Registration} />
           <Route path="/mypage" component={MyPage} />
         </Switch>
-        <Footer />
+        {/* <Footer /> */}
       </main>
     </BrowserRouter>
   )
