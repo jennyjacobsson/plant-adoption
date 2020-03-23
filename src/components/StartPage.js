@@ -123,12 +123,9 @@ export const StartPage = () => {
       <Header>
         <HeaderText>
           <h1>Plant adoption</h1>
-          {/* <h1>Easy plant adoption</h1> */}
           <HeaderImage src="/assets/1419168.png" />
           <h2>Adopt a plant</h2>
           <h2>in need of a new home</h2>
-          {/* <h2>Save the planet </h2>
-          <h2>one plant at the time</h2> */}
         </HeaderText>
       </Header>
 

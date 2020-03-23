@@ -72,13 +72,13 @@ export const Input = styled.input`
   display: block;
   width: 100%;
   box-sizing: border-box;
-  font: inherit;
   font-size: 18px;
   padding: 10px;
   margin: 10px 0;
   border: 0;
   border-radius: 6px;
   border:#F3F3F3 solid 4px;
+  box-shadow:none;
 `
 
 export const Title = styled.h1`

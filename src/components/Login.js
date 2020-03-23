@@ -40,7 +40,7 @@ export const Login = () => {
       <Form onSubmit={handleLogin}>
         <Title>Log in</Title>
         <Input
-          type="text"
+          type="email"
           onChange={(event) => setEmail(event.target.value)}
           value={email}
           placeholder="Email"

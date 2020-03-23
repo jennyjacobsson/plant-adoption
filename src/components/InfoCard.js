@@ -57,7 +57,6 @@ const Tag = styled(TagSvg)`
 const Image = styled.img`
   width: 100% ;
   height: auto;
-  border: 10px solid transparent;
   border-bottom: 0;
   box-sizing: border-box;
 `
@@ -120,7 +119,7 @@ export const InfoCard = ({ match: { params: { id } } }) => {
                 <Meta><LocationSvg /> {ad.location}</Meta>
                 <Meta><PriceSvg /> {ad.price > 0 ? `${ad.price} kr` : 'Free'}</Meta>
                 {!showAnswer && !MY_AD && (
-                  <Button label="I'll save you" onClick={() => setShowAnswer(true)} />
+                  <Button label="Adopt this one" onClick={() => setShowAnswer(true)} />
                 )}
                 {MY_AD && <Button label="Remove" onClick={handleRemoval} bg="#ed5858" />}
               </Wrap>

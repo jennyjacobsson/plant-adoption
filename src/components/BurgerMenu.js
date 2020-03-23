@@ -2,12 +2,7 @@ import React, { useState } from 'react'
 import HamburgerMenu from 'react-hamburger-menu'
 import styled from 'styled-components/macro'
 import { Link } from 'react-router-dom'
-// import { Header } from './Header'
 import { isLoggedIn } from '../App'
-
-// const HeaderPlaceholder = styled.div`
-//   height: 50px;
-// `
 
 const LinkElement = styled(Link)`
   display: block;
@@ -41,9 +36,6 @@ const BurgerWrap = styled.div`
 
   @media (min-width: 768px) {
     display:none;
-    /* max-width: ${(props) => (props.isStartPage ? 1000 : 600)}px;} */
-    /* padding: 0 10px;
-    box-sizing: border-box; */
     }
 `
 
@@ -84,7 +76,7 @@ export const BurgerMenu = () => {
               menuClicked={handleBurgerClick}
               width={24}
               height={18}
-              strokeWidth={1}
+              strokeWidth={2}
               rotate={0}
               color="black"
               borderRadius={0}

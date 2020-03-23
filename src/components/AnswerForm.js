@@ -61,7 +61,7 @@ export const AnswerForm = ({ id, onSubmit }) => {
     <Section>
       {ShowForm && (
         <Form onSubmit={handleAnswerForm}>
-          <Title>I&lsquo;ll save this one!</Title>
+          <Title>Write a message to the owner</Title>
           <Input
             type="text"
             required
@@ -88,7 +88,7 @@ export const AnswerForm = ({ id, onSubmit }) => {
       {!ShowForm && (
         <ImageWrap>
           <Title>Your answer has been sent!</Title>
-          <Image src="/assets/SmilePlant.png" />
+          <Image src="/assets/ShinePlant.png" />
         </ImageWrap>
       )}
     </Section>

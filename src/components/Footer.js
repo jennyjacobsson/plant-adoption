@@ -2,7 +2,8 @@ import React from 'react'
 import styled from 'styled-components/macro'
 
 const Foot = styled.div`
-  background-color:#e1ffd1;
+  background-color:#f3f3f3;
+  color:#222;
   height:50px;
   width:auto;
   display:flex;
