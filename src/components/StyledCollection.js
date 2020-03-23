@@ -79,6 +79,7 @@ export const Input = styled.input`
   border-radius: 6px;
   border:#F3F3F3 solid 4px;
   box-shadow:none;
+  appearance: none;
 `
 
 export const Title = styled.h1`
