@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import { Button } from './Button'
-import { Container, Input, Form, Title } from './StyledCollection'
+import { Container, ErrorText, Form, Input, Title } from './StyledCollection'
 import { SERVER_URL } from '../App'
 
 export const Registration = () => {
@@ -56,7 +56,7 @@ export const Registration = () => {
           onClick={handleRegister}
           label="Register" />
       </Form>
-      {message}
+      <ErrorText>{message}</ErrorText>
     </Container>
   )
 }

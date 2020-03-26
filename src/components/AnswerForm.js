@@ -69,7 +69,7 @@ export const AnswerForm = ({ id, onSubmit }) => {
             onChange={(event) => setName(event.target.value)}
             value={name} />
           <Input
-            type="text"
+            type="email"
             required
             placeholder="Email"
             onChange={(event) => setEmail(event.target.value)}

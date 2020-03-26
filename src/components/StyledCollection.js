@@ -40,10 +40,15 @@ export const Container = styled.div`
 
 @media (min-width: 600px) {
   max-width: 600px;   
+  width:100%;
   margin: auto;
   padding-top: 30px;
   padding-bottom: 30px;
 }
+`
+
+export const ErrorText = styled.p`
+color:red;
 `
 
 export const Form = styled.form`

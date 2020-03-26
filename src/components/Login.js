@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import { Button } from './Button'
-import { Container, Input, Form, Title } from './StyledCollection'
+import { Container, ErrorText, Form, Input, Title } from './StyledCollection'
 import { SERVER_URL } from '../App'
 
 export const Login = () => {
@@ -56,7 +56,7 @@ export const Login = () => {
         <Button
           label="Log in"
           type="submit" />
-        {errorMessage}
+        <ErrorText>{errorMessage}</ErrorText>
       </Form>
     </Container>
   )

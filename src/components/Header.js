@@ -13,6 +13,10 @@ const Outer = styled.div`
   a {
     text-decoration: none;
   }
+
+  @media (min-width: 768px) {
+    
+  }
 `
 
 const Wrap = styled.div`
