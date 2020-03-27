@@ -7,14 +7,14 @@ const Container = styled.div`
 `
 
 const Btn = styled.button`
-  border-radius: 6px;
-  font-size: 18px;
   border: 0;
-  font-weight: 600;
+  border-radius: 6px;
   padding: 12px 26px;
   color: ${({ color }) => color || '#fff'};
   background-color: ${({ bg }) => bg || '#72BD78'};
-
+  font-size: 18px;
+  font-weight: 600;
+ 
   @media (min-width: 768px) {
   font-size:20px; 
   }

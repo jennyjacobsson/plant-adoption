@@ -18,12 +18,12 @@ const jump = keyframes`
 `
 
 const Image = styled.img`
-  height:150px;
-  flex-shrink:0;
-  flex-grow:0;
-  width:auto;
   object-fit:contain;
   object-position:center;
+  height:150px;
+  width:auto;
+  flex-shrink:0;
+  flex-grow:0;
   transform-origin: 50% 50%;
     animation: ${jump} .5s linear alternate infinite;
 `
@@ -33,7 +33,7 @@ const ImageWrap = styled.div`
 `
 
 const Section = styled.div`
-margin-top:10px;
+  margin-top:10px;
 `
 
 export const AnswerForm = ({ id, onSubmit }) => {

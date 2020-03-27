@@ -13,18 +13,25 @@ export const Registration = () => {
 
   const handleRegister = (event) => {
     event.preventDefault()
+    if (!name.trim() || !email.trim() || !password.trim()) {
+      alert('You need to fill out all fields')
+      return
+    }
     fetch(`${SERVER_URL}/users`, {
       method: 'POST',
       body: JSON.stringify({ name, email, password }),
       headers: { 'Content-Type': 'application/json' }
     })
-      .then((res) => {
-        res.json().then((json) => setMessage(json.message))
+      .then((res) => res.json())
+      .then((json) => {
+        setMessage(message)
+        if (json.saved) {
+          history.push('/login')
+        } else {
+          console.error(json.errors)
+        }
       })
-      .then(() => {
-        history.push('/login')
-      })
-      .catch((err) => console.log('error:', err))
+      .catch(console.error)
   }
 
   return (

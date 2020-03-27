@@ -23,9 +23,9 @@ const Container = styled.div`
 `
 
 const Title = styled.h3`
-  text-align:left;
   padding: 0 10px;
   flex: 1;
+  text-align:left;
 
   @media (min-width: 600px) {
     font-size:22px;
@@ -48,11 +48,11 @@ const TextBlue = styled(Text)`
 
 const Wrap = styled.div`
   display:flex;
-  justify-content:space-between;
   width:auto;
-  background-color:#F3F3F3;
-  align-items:stretch;
   margin-top:auto;
+  align-items:stretch;
+  justify-content:space-between;
+  background-color:#F3F3F3;
 
   svg {
     margin-right:8px;

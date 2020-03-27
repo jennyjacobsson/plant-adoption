@@ -13,8 +13,8 @@ const Outer = styled.div`
 `
 
 const Title = styled.h1`
-  font-size:24px;
   margin:20px;
+  font-size:24px;
 `
 
 const Text = styled.h3`

@@ -16,7 +16,6 @@ const Header = styled.div`
 
   @media (min-width: 768px) {
     height:500px;
-
   }
 `
 
@@ -25,8 +24,8 @@ const HeaderText = styled.div`
   font-family: 'Cherry Swash', cursive;
 
   h1 {
-    font-weight: normal;
     font-size:36px;
+    font-weight: normal;
 
     @media (min-width: 768px) {
     font-size: 45px;
@@ -34,10 +33,9 @@ const HeaderText = styled.div`
   }
 
   h2 {
-
-    font-weight: normal;
-    font-size: 26px;
     margin: 0;
+    font-size: 26px;
+    font-weight: normal;
   }
 
   a {
@@ -53,10 +51,10 @@ const Outer = styled(Container)`
 
   h2 {
     margin: 40px 0 20px;
+    padding:0 40px;
     text-transform: uppercase;
     font-weight: normal;
     font-size: 18px;
-    padding:0 40px;
     line-height:1.5;
   }
 
@@ -69,10 +67,10 @@ const Outer = styled(Container)`
 `
 
 const Form = styled.form` 
-  text-align: center;
   position:relative;
-  margin: 0 auto 20px;
   max-width:400px;
+  margin: 0 auto 20px;
+  text-align: center;
 
   svg {
     position:absolute;
@@ -85,18 +83,18 @@ const Form = styled.form`
 const SearchField = styled.input`
   width:100%;
   height:40px;
-  text-align: center;
   border: none;
   border-radius:6px;
-  font-size:18px;
   background-color: #F3F3F3;
+  text-align: center;
+  font-size:18px;
 `
 
 const HeaderImage = styled.img`
-width:auto;
+  width:auto;
   height:150px;
-  opacity:80%;
   margin-bottom:20px;
+  opacity:80%;
 
   @media (min-width: 768px) {
   height:250px;
@@ -112,7 +110,7 @@ export const StartPage = () => {
     fetch(`${SERVER_URL}/ads?search=${searchQuery}`)
       .then((res) => res.json())
       .then((json) => {
-        // json.reverse()
+        json.reverse()
         setAds(json)
         setLoading(false)
       })

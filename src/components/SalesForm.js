@@ -8,15 +8,15 @@ import { getAuth, SERVER_URL } from '../App'
 
 const File = styled.label`
   display: flex;
+  position: relative;
   align-items: center;
   justify-content: center;
-  position: relative;
   padding: 10px 25px;
-  font-size: 16px;
   background-color: white;
   overflow: hidden;
   border-radius: 6px;
   border:#F3F3F3 solid 4px;
+  font-size: 16px;
 
   input {
     position: absolute;

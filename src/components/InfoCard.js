@@ -11,9 +11,9 @@ import { getAuth, SERVER_URL } from '../App'
 import { AnswerForm } from './AnswerForm'
 
 const Background = styled.div`
-  color:#514e4c;
   border:#F3F3F3 solid 6px;
   border-radius:6px;
+  color:#514e4c;
 `
 
 const Wrap = styled.div`
@@ -55,10 +55,10 @@ const Tag = styled(TagSvg)`
 `
 
 const Image = styled.img`
+  box-sizing: border-box;
   width: 100% ;
   height: auto;
   border-bottom: 0;
-  box-sizing: border-box;
 `
 
 export const InfoCard = ({ match: { params: { id } } }) => {

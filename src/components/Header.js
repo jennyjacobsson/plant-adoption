@@ -7,15 +7,11 @@ const Outer = styled.div`
   display:flex;
   width: 100%;
   box-sizing: border-box;
-  text-align:left;
   padding: 16px 0;
+  text-align:left;
   
   a {
     text-decoration: none;
-  }
-
-  @media (min-width: 768px) {
-    
   }
 `
 
@@ -27,11 +23,9 @@ const Wrap = styled.div`
 
 const Text = styled.h2`
   margin-left:10px;
+  color:#222;
   font-size:14px;
   line-height: 1;
-  color:#222;
-  /* font-family: 'Cherry Swash', cursive; */
-
 
   @media (min-width: 768px) {
     margin-left:40px;
@@ -40,14 +34,14 @@ const Text = styled.h2`
 `
 
 const Logo = styled.h1`
-  font-size:28px;
-  font-weight:normal;
   color:#222;
   font-family: 'Cherry Swash', cursive;
+  font-size:28px;
+  font-weight:normal;
 
   @media (min-width: 768px) {
     margin:0;
-   font-size:30px;
+    font-size:30px;
   } 
 `
 
